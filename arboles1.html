@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>bynarytree</title>
+</head>
+<body>
+  
+</body>
+<script>
+  //se crea la clase producto
+  class Producto {
+    constructor(nombre, codigo, precio, cantidad){
+      this.nombre = nombre;
+      this.codigo = codigo;
+      this.precio = precio;
+      this.cantidad = cantidad;
+      this.hijoDerecho = null;
+      this.hijoIzquierdo = null;
+    }
+  }
+  //se crea la clase arbol
+  class BinaryTree{
+    constructor(){
+      this.raiz = null;
+    }
+    //Es la funcion principal para agregar un elemento nuevo.
+    agregar(nuevo){
+      if (this.raiz == null)
+        this.raiz = nuevo;
+      else 
+        this._agregate(nuevo, this.raiz);
+    }
+    //Es la funcion que se llama cuando la raiz/hijoX esta ocupado (es recursiva).
+    _agregate(nuevo, nodox){
+      if (nuevo.codigo < nodox.codigo)
+        if (nodox.hijoIzquierdo == null) 
+          nodox.hijoIzquierdo = nuevo;
+        else this._agregate(nuevo, nodox.hijoIzquierdo);
+      else 
+        if (nodox.hijoDerecho == null)
+          nodox.hijoDerecho = nuevo;
+        else 
+          this._agregate(nuevo, nodox.hijoDerecho);
+    }
+    //Funcion principal para inOrder.
+    inOrder(){
+      if (this.raiz == null)
+        return "";
+      else
+        return this._inOrderRec(this.raiz);
+    }
+    //Funcion que se llama cuando existe un hijo derecho/izquierdo (es recursiva).
+    _inOrderRec(nodox){
+      let info = "";
+      //analiza el lado Izquierdo.
+      if (nodox.hijoIzquierdo != null)
+        info += this._inOrderRec(nodox.hijoIzquierdo);
+      //agrega la raiz.
+      info += nodox.codigo + " - ";
+      //analiza el lado Derecho.
+      if (nodox.hijoDerecho != null)
+        info += this._inOrderRec(nodox.hijoDerecho);
+      return info;
+    }
+  }
+</script>
+</html>
