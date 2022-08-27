@@ -6,24 +6,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
   <script src="js/producto.js"></script>
+  <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
   <header>Inventario Arboles Binarios</header>
   <br>
-  <div id="app">
-    <section id="productos">
+  <div class="app">
+    <section class="productos">
       <form>
-        <label for="txtCod">
-          Codigo: <br><input type="text" id="txtCod">
+        <label class="cajas" for="txtCod">
+          Codigo <br><input type="text" id="txtCod">
         </label><br>
-        <label for="txtNom">
-          Nombre: <br><input type="text" id="txtNom">
+        <label class="cajas" for="txtNom">
+          Nombre <br><input type="text" id="txtNom">
         </label><br>
-        <label for="txtPre">
-          Precio: <br><input type="number" id="txtPre">
+        <label class="cajas" for="txtPre">
+          Precio <br><input type="number" id="txtPre">
         </label><br>
-        <label for="txtCan">
-          Cantidad: <br><input type="number" id="txtCan">
+        <label class="cajas" for="txtCan">
+          Cantidad <br><input type="number" id="txtCan">
         </label><br><br>
         <button type='button' id='btnAgregar'>Agregar</button>
         <button type='button' id='btnBuscar'>Buscar</button>
@@ -34,7 +35,7 @@
         <button type='button' id='btnClear'>Borrar Detalles</button>
       </form>
     </section>
-    <div id="detalles"></div>
+    <div class="detalles" id="detalles"></div>
   </div>
   <script src="js/app.js"></script>
 </body>

@@ -1,0 +1,27 @@
+body{
+  background-color: lightblue;
+}
+header{
+  text-align: center;
+  font-size: large;
+  font-style: italic;
+  font-weight: bold;
+}
+button{
+  font-style: italic;
+  background-color: rgb(0, 0, 0);
+  color: white;
+  border-radius: 5px;
+  border-color: white;
+  
+}
+.app{
+  text-align: center;
+}
+.cajas{
+  line-height: 25px;
+  font-style: italic;
+}
+.detalles{
+  font-style: italic  ;
+}
