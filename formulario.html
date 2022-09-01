@@ -2,41 +2,42 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>BinaryTreee</title>
   <script src="js/producto.js"></script>
   <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-  <header>Inventario Arboles Binarios</header>
-  <br>
-  <div class="app">
-    <section class="productos">
-      <form>
-        <label class="cajas" for="txtCod">
-          Codigo <br><input type="text" id="txtCod">
-        </label><br>
-        <label class="cajas" for="txtNom">
-          Nombre <br><input type="text" id="txtNom">
-        </label><br>
-        <label class="cajas" for="txtPre">
-          Precio <br><input type="number" id="txtPre">
-        </label><br>
-        <label class="cajas" for="txtCan">
-          Cantidad <br><input type="number" id="txtCan">
-        </label><br><br>
+  <header><h1>Inventario</h1></header>
+  <div id="app">
+    <form>
+      <div id="botones">
         <button type='button' id='btnAgregar'>Agregar</button>
         <button type='button' id='btnBuscar'>Buscar</button>
-        <button type='button' id='btnInorder'>inOrder</button>
-        <button type='button' id='btnPreorder'>preOrder</button>
-        <button type='button' id='btnPostorder'>postOrder</button>
-        <button type='reset'>Cancelar</button><br><br>
+        <button type='button' id='btnInorder'>Inorder</button>
+        <button type='button' id='btnPreorder'>Preorder</button>
+        <button type='button' id='btnPostorder'>Postorder</button>
+      </div>
+      <div id="formulario">
+        <label class="cajas" for="txtCod">
+          Codigo:<br><input type="text" id="txtCod">
+        </label><br>
+        <label class="cajas" for="txtNom">
+          Nombre:<br><input type="text" id="txtNom">
+        </label><br>
+        <label class="cajas" for="txtPre">
+          Precio:<br><input type="number" id="txtPre">
+        </label><br>
+        <label class="cajas" for="txtCan">
+          Cantidad:<br><input type="number" id="txtCan">
+        </label><br><br>
+      </div>
+      <div id="botones2">
+        <button type='reset'>Cancelar</button>
         <button type='button' id='btnClear'>Borrar Detalles</button>
-      </form>
-    </section>
+      </div>
+    </form>
     <div class="detalles" id="detalles"></div>
   </div>
-  <script src="js/app.js"></script>
 </body>
+<script src="js/app.js"></script>
 </html>

@@ -1,27 +1,45 @@
-body{
-  background-color: lightblue;
+body {
+  font: 100% Lucida Sans, Verdana;
+  margin: 20px;
+  line-height: 26px;
+  text-align: center;
 }
 header{
   text-align: center;
-  font-size: large;
-  font-style: italic;
-  font-weight: bold;
 }
-button{
-  font-style: italic;
-  background-color: rgb(0, 0, 0);
-  color: white;
-  border-radius: 5px;
-  border-color: white;
-  
-}
-.app{
+#app{
+  display: inline-block;
   text-align: center;
+  width: 70%;
 }
-.cajas{
-  line-height: 25px;
-  font-style: italic;
+h1, h3 {
+  color: #4CAF50;
 }
-.detalles{
-  font-style: italic  ;
+h2 {
+  color: red;
+}
+#botones {
+  padding-top: 4%;
+  float: left;
+  width: min-content;
+}
+#botones2 {
+  padding-top: 7%;
+  float: right;
+  width: min-content;
+}
+#formulario {
+  display: inline-block;
+}
+button {
+  width: 165px;
+  background-color: #f1f1f1;
+  border: 1px solid #d4d4d4;
+  list-style-type: none;
+  padding: 2px;
+  text-align: left;
+  cursor: pointer;
+}
+.cajas {
+  color: #681616;
 }
